@@ -13,14 +13,14 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     
-    m <- NULL  # Reset inverse matrix value
+    m <- NULL  
     set <- function(y) { ## Define set matrix function
         x <<- y
         m <<- NULL
     }
     get <- function() x  ## Define get matrix function
-    setSolve <- function(solve) m <<- solve # Define set inverse matrix function
-    getSolve <- function() m ##  getSolve -> Define get inverse matrix function
+    setSolve <- function(solve) m <<- solve     ## Define set inverse matrix function
+    getSolve <- function() m    ##  getSolve -> Define get inverse matrix function
     list(set = set, get = get,
          setSolve = setSolve,
          getSolve = getSolve) ## Creates list of functions
